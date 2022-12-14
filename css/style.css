@@ -29,15 +29,10 @@ a{
 body{
   background-image: url(../imgs/bg-simplify-section-desktop.svg);
   background-repeat: no-repeat;
-  color: var( --darkBlue);
-  overflow-x: hidden;
+  
 }
 
 
-.btn:hover{
-  background: #f5886d;
-  cursor: pointer;
-}
 
 
 
@@ -49,7 +44,7 @@ body{
 /*--------------------------------------- header -----------------------------------------*/
 nav{
   height: 6rem;
-  width: 100vw;
+ /*  width: 100vw; */
   display: flex;
   justify-content: space-around;
   align-items: center;
