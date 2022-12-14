@@ -1,13 +1,28 @@
+
+
+
 function Ck() {
 	var checkBox = document.getElementById("dm");
 
 	if (checkBox.checked == true) {
-		document.body.style.backgroundColor = "#00171f";
-		document.body.style.transform = "1s";
+		document.body.style.backgroundColor = "#181e36";
+		document.body.style.color = "#fff";
+		//document.body.style.transform = "1s";
 		document.getElementById("logo-img").src = "../imgs/logo-dark.svg";
+
+		Array.from(document.getElementsByClassName("list-link")).forEach(element => {
+			element.classList.remove("list-link-light");
+			element.classList.add("list-link-dark");
+		});
+
 	} else {
 		document.body.style.backgroundColor = "#fff";
+		document.body.style.color = "#242d52";
 		document.getElementById("logo-img").src = "../imgs/logo.svg";
+		Array.from(document.getElementsByClassName("list-link")).forEach(element => {
+			element.classList.add("list-link-light");
+			element.classList.remove("list-link-dark");
+		});
 	}
 
 	if (checkBox.checked == true) {
