@@ -22,7 +22,252 @@
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+a{
+  text-decoration: none;
+}
+
 body{
   background-image: url(../imgs/bg-simplify-section-desktop.svg);
   background-repeat: no-repeat;
+}
+
+
+.btn:hover{
+  background: #f5886d;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------- header -----------------------------------------*/
+nav{
+  height: 6rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+/*Styling Links*/
+.nav-links{
+  display: flex;
+  list-style: none; 
+  align-items: center;
+  width: 60%;
+    justify-content: space-around;
+}
+.nav-links li a{
+  text-decoration: none;
+  margin: 0 0.7vw;
+  color: var(--vDarkBlue);
+}
+.nav-links li a:hover {
+  color: var(--darkGrayish);
+}
+.nav-links li {
+  position: relative;
+}
+
+
+
+/*Styling Buttons*/
+
+
+.header-start-btn{
+  background: var(--brightRed);
+  border: none;
+  padding: 0px 25px;
+  border-radius: 25px;
+  color: var(--VPaleRed);
+  margin-right: 5px;
+  height: 40px;
+}
+
+.join-button{
+  color: #131418;
+  background-color: #61DAFB;
+  border: 1.5px solid #61DAFB;
+  border-radius: 2em;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.join-button:hover {
+  color: #f2f5f7;
+  background-color: transparent;
+  border:1.5px solid #f2f5f7;
+  transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+  width: 30px;
+  height:3px;
+  background:var(--darkBlue);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger{
+  display: none;
+}
+
+
+
+
+
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+  nav{
+      position: fixed;
+      z-index: 3;
+      justify-content: space-between;
+  }
+  .header-logo-wrapper{
+    margin-left: 15px;
+  }
+  .header-start-btn{
+    display: none;
+  } 
+  .hamburger{
+      display:block;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      transition: all 0.7s ease;
+  }
+  .nav-links{
+    position: fixed;
+    background: #fff;
+    height: 300px;
+    width: 80%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    top: 125px;
+    box-shadow: 0 20px 40px -5px rgb(66 66 66 / 70%);
+    border-radius: 5px;
+    right: 10%;
+  }
+  .nav-links.open{
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+  }
+  .nav-links li{
+      opacity: 0;
+  }
+  .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4){
+      transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5){
+      transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6){
+      transition: all 0.5s ease 0.9s;
+      margin: 0;
+  }
+  .nav-links li:nth-child(7){
+      transition: all 0.5s ease 1s;
+      margin: 0;
+  }
+  li.fade{
+      opacity: 1;
+  }
+}
+
+
+
+@media (min-width:801px) and (max-width:1070px){
+  .nav-links {
+    width: 75% !important;
+}
+}
+
+
+
+
+
+
+
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+
+
+
+
+/* night mood */
+
+
+.night-btn {
+  align-self: center;
+}
+
+#button {
+  transform: scaleX(-1);
+  display: flex;
+  height: 40px;
+  width: 80px;
+  border-radius: 100px;
+  background: url("https://i.pinimg.com/564x/a5/5c/13/a55c132fec6ba35b063bc6d32c7cf7fb.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.circle {
+  align-self: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  border: 4px solid #fff;
+  transition: 0.5s;
+  background: #fff;
+  margin-left: 58%;
+}
+
+input {
+  display: none;
+}
+
+#dm:checked ~ .circle {
+  margin-left: 2%;
+  transition: 0.5s;
+}
+
+#dm:checked ~ #button {
+  background: #1c3d4f;
 }
