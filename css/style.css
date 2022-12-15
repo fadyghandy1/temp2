@@ -191,9 +191,14 @@ nav{
 
 
   .bring-sec-wrapper{
+    width: 80% !important;
     flex-direction: column-reverse;
     margin: 50px auto !important;
     text-align: center;
+  }
+  .bring-heading {
+    font-size: 1.5rem !important;
+    line-height: 2.5rem !important;
   }
 
   .bring-left{
@@ -554,6 +559,12 @@ nav{
 .difference__bullets > ul > li > p {
   text-align: left;
 }
+
+.difference__text h2{
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
 /* /////////////////////////////////////////////////////////////////////end section of difference ////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////start section of testimonials////////////////////////////////////////////////*/
 /* ///////////////////////////////////////////////////////////////////end section testimonilas/////////////////////////////////////////////////// */
