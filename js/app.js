@@ -16,6 +16,11 @@ function Ck() {
 			element.classList.add("list-link-dark");
 		});
 
+		Array.from(document.getElementsByClassName("card")).forEach(element => {
+			element.classList.remove("card-light");
+			element.classList.add("card-dark");
+		});
+
 	} else {
 		document.body.style.backgroundColor = "#fff";
 		document.body.style.color = "#242d52";
@@ -23,6 +28,11 @@ function Ck() {
 		Array.from(document.getElementsByClassName("list-link")).forEach(element => {
 			element.classList.add("list-link-light");
 			element.classList.remove("list-link-dark");
+		});
+
+		Array.from(document.getElementsByClassName("card")).forEach(element => {
+			element.classList.add("card-light");
+			element.classList.remove("card-dark");
 		});
 	}
 
