@@ -777,7 +777,7 @@ nav{
   display: flex;
   grid-gap: 1em;
    overflow: hidden; 
-  width: 98vw;
+  width:215vw;
   height: 450px;
     place-items: center;
 }
@@ -826,6 +826,7 @@ nav{
 }
 
 .map {
+  display: none;
   margin-top: 1em;
 }
 .map > button {
@@ -853,9 +854,71 @@ nav{
   height: 0.5em;
   width: 0.5em;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes example {
+  0%   {
+    /* width: 215vw; */
+    transform: translate(50px,0px);
+  }
+ 
+ 
+  100% {
+    /* width: 98vw; */
+    /* transform: scale(2, 3); */
+    transform: translate(1150px,0px);
+  
+  }
+}
+
+/* The element to apply the animation to */
+.wrapper {
+  display: flex;
+  grid-gap: 1em;
+   overflow: hidden; 
+  /* width:215vw; */
+  height: 450px;
+    place-items: center;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media  (max-width: 768px) {
   .card {
     width: 93vw;
+  }
+  .wrapper {
+    display: flex;
+    grid-gap: 1em;
+     overflow: hidden; 
+     width: 98vw; 
+    height: 450px;
+      place-items: center;
+    animation-name: example; 
+     animation-duration: 0; 
+     animation-iteration-count: 0; 
+  }
+  @keyframes example {
+    0%   {
+      /* width: 215vw; */
+      transform: translate(0px,0px);
+    }
+   
+   
+    100% {
+      /* width: 98vw; */
+      /* transform: scale(2, 3); */
+      transform: translate(0px,0px);
+    
+    }
+  }
+  .map {
+    display: block;
+    
   }
 }
