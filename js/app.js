@@ -10,7 +10,7 @@ function Ck() {
 		document.body.style.backgroundImage = "url('../imgs/bg-simplify-section-desktop2.svg')";
 		document.body.style.color = "#fff";
 		//document.body.style.transform = "1s";
-		document.getElementById("logo-img").src = "../imgs/logo-dark.svg";
+		document.getElementById("logo-img").src = "./imgs/logo-dark.svg";
 
 		Array.from(document.getElementsByClassName("list-link")).forEach(element => {
 			element.classList.remove("list-link-light");
@@ -26,7 +26,7 @@ function Ck() {
 		document.body.style.backgroundColor = "#fff";
 		document.body.style.backgroundImage = "url('../imgs/bg-simplify-section-desktop.svg')";
 		document.body.style.color = "#242d52";
-		document.getElementById("logo-img").src = "../imgs/logo1.svg";
+		document.getElementById("logo-img").src = "./imgs/logo1.svg";
 		Array.from(document.getElementsByClassName("list-link")).forEach(element => {
 			element.classList.add("list-link-light");
 			element.classList.remove("list-link-dark");
