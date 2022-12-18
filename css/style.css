@@ -38,6 +38,9 @@ p{
   color: var(--darkGrayish);
 }
 
+h3{
+  color: rgb(36, 45, 82);
+}
 
 /*--------------------------------------- header -----------------------------------------*/
 nav{
@@ -102,10 +105,10 @@ nav{
 }
 
 /*Styling Hamburger Icon*/
-.hamburger div{
+.line{
   width: 30px;
   height:3px;
-  background:var(--darkBlue);
+
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -113,7 +116,12 @@ nav{
   display: none;
 }
 
-
+.line-dark{
+background: #fff;
+}
+.line-light{
+  background:var(--darkBlue);
+}
 
 
 
