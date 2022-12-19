@@ -1,24 +1,25 @@
-
-const buttonsWrapper = document.querySelector(".map");
-const slides = document.querySelector(".inner");
-
-buttonsWrapper.addEventListener("click", e => {
-  if (e.target.nodeName === "BUTTON") {
-    Array.from(buttonsWrapper.children).forEach(item =>
-      item.classList.remove("active")
-    );
-    if (e.target.classList.contains("first")) {
-      slides.style.transform = "translateX(-0%)";
-      e.target.classList.add("active");
-    } else if (e.target.classList.contains("second")) {
-      slides.style.transform = "translateX(-25%)";
-      e.target.classList.add("active");
-    } else if (e.target.classList.contains('third')){
-      slides.style.transform = 'translatex(-50%)';
-      e.target.classList.add('active');
-    }else if (e.target.classList.contains('forth')){
-      slides.style.transform = 'translatex(-75%)';
-      e.target.classList.add('active');
-    }
-  }
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: true,
+  breakpoints: {
+    600: {
+      slidesPerView: 1.45,
+      spaceBetween: 0,
+    },
+    992: {
+      initialSlide: 1,
+      slidesPerView: 2.43,
+      spaceBetween: 40,
+    },
+  },
+  cssmode: true,
+  mousewheel: true,
+  grabCursor: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    centeredSlides: true,
+    clickable: true,
+  },
 });
